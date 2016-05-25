@@ -1,0 +1,227 @@
+html,
+body {
+    font-family: arial, sans-serif;
+    background: black;
+    margin: 0;
+    padding: 1.5em;
+    background-image: url("../imgs/rebc.gif");
+}
+
+header h1,
+a {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+
+header .add {
+    background-color: #388ac1;
+}
+
+ul {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1000px;
+}
+
+li {
+    box-shadow: 10px 10px 10px rgba(33, 33, 33, .7);
+    width: 192px;
+    min-height: 192px;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    background-color: #ffc;
+    padding: 10px;
+    margin: 10px 20px 10px;
+    box-sizing: border-box;
+    -webkit-transition: transform 0.15s linear;
+    -o-transition: transform 0.15s linear;
+    transition: transform 0.15s linear;
+}
+
+li:nth-child(3n) {
+    background-color: #cfc;
+}
+
+li:nth-child(3n+1) {
+    background-color: #ccf;
+}
+
+li:nth-child(3n+2) {
+    background-color: #ffc;
+}
+
+li:nth-child(2n) {
+    top: 5px;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    transform: rotate(4deg);
+}
+
+li:nth-child(2n+1) {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+li:hover {
+    z-index: 5;
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+li h4 {
+    font-size: 16px;
+}
+
+li time {
+    display: block;
+    color: #2d2d2d;
+    margin: 10px 10px;
+}
+
+li span {
+    display: block;
+    line-height: 1.2em;
+    font-size: 14px;
+    text-indent: 2em;
+}
+
+li .setting {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+li .setting img {
+    width: 20px;
+    height: 20px;
+    -webkit-transition: transform 0.15s linear;
+    -o-transition: transform 0.15s linear;
+    transition: transform 0.15s linear;
+}
+
+li .setting img:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+
+/* 模态框 */
+
+#modal {
+    margin: 0 auto;
+    max-width: 600px;
+    visibility: hidden;
+    width: 80%;
+    top: -100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 0;
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+#modal:target {
+    top: 25%;
+    visibility: visible;
+    opacity: 1;
+    z-index:15;
+}
+
+#modal .modal-wrapper {
+    z-index: 10;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
+
+#modal .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 5px 5px 0 0;
+}
+
+#modal .modal-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+#modal .modal-body {
+    padding: 15px;
+    background-color: #fff;
+}
+
+#modal label {
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#modal .input-title {
+    font-size: 14px;
+    width: 80%;
+    padding: 8px 10px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 5px;
+}
+
+#modal .input-content {
+    font-size: 14px;
+    width: 80%;
+    padding: 8px 10px;
+    min-height: 100px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 5px;
+}
+
+#modal .modal-footer {
+    padding: 15px;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+#modal button ,button{
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 13px 6px 13px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+#modal button.submit {
+    right: 30px;
+    float: right;
+    background-color: #388ac1;
+}
+
+#modal button.cancel {
+    right: 80px;
+    float: right;
+    background-color: #d9534f;
+}

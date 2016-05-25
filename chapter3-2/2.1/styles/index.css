@@ -1,0 +1,54 @@
+html,body{
+	font-family: arial,sans-serif;
+	background: black;
+	margin:0;
+	padding:1.5em;
+	background-image: url("../imgs/rebc.gif");
+}
+
+ul{
+	margin:0 auto;
+	padding:0;
+	max-width: 1000px;
+}
+li{
+	width:192px;
+	min-height: 192px;
+	position:relative;
+	list-style:none;
+	display: inline-block;
+	background-color:#ffc;
+	padding:10px;
+	margin:10px 20px 10px;
+	box-sizing: border-box;
+}
+
+li h4{
+	font-size: 16px;
+}
+
+li time{
+	display:block;
+	color:#2d2d2d;
+	margin:10px 10px;
+}
+
+li span{
+	display:block;
+	line-height: 1.2em;
+	font-size: 14px;
+	text-indent:2em;
+
+}
+
+
+li  .setting{
+	position: absolute;
+	top:5px;
+	right:5px;
+}
+
+li .setting img{
+	width:20px;
+	height:20px;
+}
